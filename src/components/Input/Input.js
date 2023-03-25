@@ -5,9 +5,9 @@ export const Input = ({
   name,
   variant = "outlined",
   type = "text",
-  size = "md",
-  val,
-  setValue,
+  size = "sm",
+  value,
+  onChange: setValue,
   fullWidth,
   style,
   placeholder = "Enter something here",
@@ -24,7 +24,7 @@ export const Input = ({
         name={name}
         style={newStyle}
         type={type}
-        value={val}
+        value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
         className={` rounded-md outline-none ${

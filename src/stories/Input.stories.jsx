@@ -15,18 +15,29 @@ export default {
 
   //define arguments which will be passed to template
   argTypes: {
-     // label: {
-    //   description: 'text to display',
-    //   table: {
-    //     type: { 
-    //       summary: 'something short', 
-    //       detail: 'something really really long' 
-    //     },
-    //   },
-    //   control: {
-    //     type: null,
-    //   },
-    // },
+     id: {
+      description: 'set ID attribute of input field',
+      
+      table: {
+        type: { 
+          summary: 'string', 
+        },
+      },
+      control: {
+        type: "text",
+      },
+    },
+    name: {
+      description: 'set name attribute of input field',
+      table: {
+        type: { 
+          summary: 'string', 
+        },
+      },
+      control: {
+        type: "text",
+      },
+    },
     variant: {
       description: 'select the type of input field to render in the UI',
       table: {
@@ -54,6 +65,7 @@ export default {
     },
     size: {
       description: 'select the size of input field',
+      defaultValue: 'sm',
       table: {
         type: { 
           summary: 'string', 
@@ -85,7 +97,7 @@ export default {
       },
     },
     style: {
-      description: 'prop to style the component',
+      description: 'prop to style the input component',
       defaultValue: {},
       table: {
         type: { 
@@ -93,16 +105,19 @@ export default {
         },
       },
     },
-    onClick: {
-      description: 'event to trigger on clicking the button',
+    value: {
+      description: 'set value of input field',
       table: {
         type: { 
-          summary: '((event?: MouseEvent<HTMLDivElement, MouseEvent>) => void)', 
+          summary: 'string', 
         },
       },
+      control: {
+        type: "text",
+      },
     },
-    setValue: {
-      description: 'event to update the state to store in input field',
+    onChange: {
+      description: 'event to update the value to store in input field',
       table: {
         type: { 
           summary: '((event?: MouseEvent<HTMLDivElement, MouseEvent>) => void)', 
@@ -133,7 +148,7 @@ export const input = Template.bind({});
 input.parameters = {
   docs: {
     source: {
-      code: 'import Input from design-system-betaflux/Input/Input',
+      code: 'import {Input} from design-system-betaflux/Input',
       language: "javascript",
       type: "auto",
     },

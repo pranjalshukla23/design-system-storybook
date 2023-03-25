@@ -19,8 +19,8 @@ function LogInFields() {
           name='email'
           placeholder='johndoe@example.com'
           fullWidth={true}
-          val={email}
-          setValue={setEmail}
+          value={email}
+          onChange={setEmail}
           style={{
             border: email.length > 0 && email.length < 5 ? "2px solid red" : "",
           }}
@@ -33,6 +33,7 @@ function LogInFields() {
           <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
         )}
       </label>
+      setValue
       <label htmlFor='password' className='relative w-full'>
         Password
         <Input
@@ -41,8 +42,8 @@ function LogInFields() {
           id='password'
           name='password'
           fullWidth={true}
-          val={password}
-          setValue={setPassword}
+          value={password}
+          onChange={setPassword}
         />
       </label>
       <Button

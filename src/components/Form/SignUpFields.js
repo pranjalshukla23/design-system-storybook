@@ -23,8 +23,8 @@ function SignUpFields() {
           name='firstName'
           placeholder='John'
           fullWidth={true}
-          val={firstName}
-          setValue={setFirstName}
+          value={firstName}
+          onChange={setFirstName}
           required
           style={{
             border:
@@ -50,8 +50,8 @@ function SignUpFields() {
           name='lastName'
           placeholder='Doe'
           fullWidth={true}
-          val={lastName}
-          setValue={setLastName}
+          value={lastName}
+          onChange={setLastName}
           required
           style={{
             border:
@@ -76,8 +76,8 @@ function SignUpFields() {
           name='email'
           placeholder='johndoe@example.com'
           fullWidth={true}
-          val={email}
-          setValue={setEmail}
+          value={email}
+          onChange={setEmail}
           style={{
             border: email.length > 0 && email.length < 5 ? "2px solid red" : "",
           }}
@@ -97,8 +97,8 @@ function SignUpFields() {
           id='address'
           name='address'
           className='w-full border-2'
-          val={address}
-          setValue={setAddress}
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
           style={{
             border:
               address.length > 0 && address.length < 5 ? "2px solid red" : "",
@@ -119,8 +119,10 @@ function SignUpFields() {
           id='state'
           name='state'
           className='w-full border-2 p-2'
-          val={state}
-          setValue={setState}
+          value={state}
+          onChange={(e) => {
+            setState(e.target.value);
+          }}
           style={{
             border:
               state.length > 0 && pinCode.length < 5 ? "2px solid red" : "",
@@ -145,8 +147,8 @@ function SignUpFields() {
           name='pinCode'
           placeholder='400061'
           fullWidth={true}
-          val={pinCode}
-          setValue={setPinCode}
+          value={pinCode}
+          onChange={setPinCode}
           style={{
             border:
               pinCode.length > 0 && pinCode.length < 5 ? "2px solid red" : "",

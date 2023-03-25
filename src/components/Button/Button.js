@@ -3,7 +3,7 @@ import React from "react";
 export const Button = ({
   label = "click here",
   color = "primary",
-  size = "md",
+  size = "sm",
   variant = "contained",
   onClick,
   onMouseOver,
@@ -22,19 +22,21 @@ export const Button = ({
       onMouseOut={onMouseOut}
       className={` text-center text-2xl border-2 rounded-md w-52 ${
         color === "success"
-          ? "border-1 rounded-md border-inherit bg-green-500 text-black"
+          ? "border-1 rounded-md border-inherit bg-green-400 text-black"
           : color === "secondary"
-          ? "border-0 text-black bg-blue-400"
+          ? "border-0 text-black bg-purple-400"
           : color === "error"
           ? "border-2 border-red-500 rounded-md text-black font-bold bg-red-500"
-          : "border-0 bg-none text-black"
+          : color === "primary"
+          ? "border-0 text-black bg-blue-600"
+          : "border-0 text-black bg-inherit"
       }
 
       ${
         variant === "text"
           ? "border-0 text-black"
           : variant === "contained"
-          ? "bg-blue-400 text-black rounded-md"
+          ? "bg-blue-600 text-black rounded-md"
           : variant === "outlined"
           ? "border-2 border-blue-400 text-black bg-inherit"
           : ""

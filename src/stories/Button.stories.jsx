@@ -31,7 +31,6 @@ export default {
       table: {
         type: { 
           summary: 'submit', 
-        
         },
       },
       control: {
@@ -53,8 +52,8 @@ export default {
     },
     color: {
       description: 'prop to set the color of button',
-      defaultValue: "outlined",
-      options: ['success', 'secondary', 'error', 'default'],
+      defaultValue: "default",
+      options: ['success', 'secondary', 'error', 'primary' ,'default'],
       defaultValue:"default",
       table: {
         type: { 
@@ -80,7 +79,7 @@ export default {
       },
     },
     style: {
-      description: 'prop to style the component',
+      description: 'prop to style the button component',
       defaultValue: {},
       table: {
         type: { 

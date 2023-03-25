@@ -1,7 +1,4 @@
 import {Card} from "../components/Card";
-import SignUpFields from "../components/Form/SignUpFields";
-import Form from "../components/Form/Form";
-import LogInFields from "../components/Form/LogInFields";
 
 const user =  {
         id: 1,
@@ -36,7 +33,7 @@ export default {
       }
     },
     style: {
-      description: 'prop to style the component',
+      description: 'prop to style the card component',
       defaultValue: {},
       table: {
         type: { 
@@ -69,34 +66,13 @@ export const card = Template.bind({});
 card.parameters = {
   docs: {
     source: {
-      code: 'import Card from design-system-betaflux/Card/Card',
+      code: 'import {Card} from design-system-betaflux/Card',
       language: "javascript",
       type: "auto",
     },
   },
 };
 
-
-//define a template for creating story
-// you create a template using a component
-//template can accept arguments which can be passed as props to component
-const Template2 = (args) => (
-  <div className="flex  justify-evenly items-center">
- <Form {...args}>
-  <SignUpFields/>
-    </Form>
-    <Form {...args}>
-  <LogInFields/>
-    </Form>
-  </div>
- 
-)
-
-
-
-//story #2 - Form
-//create story from a template
-export const form = Template2.bind({});
 
 
 
