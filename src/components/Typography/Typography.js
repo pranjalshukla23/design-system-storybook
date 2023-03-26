@@ -1,0 +1,25 @@
+export const Typography = ({ children, style, variant }) => {
+  console.log(variant);
+  return (
+    <div
+      className={` ${
+        variant === "h1"
+          ? "text-6xl"
+          : variant === "h2"
+          ? "text-4xl"
+          : variant === "h3"
+          ? "text-3xl"
+          : variant === "h4"
+          ? "text-2xl"
+          : variant === "h5"
+          ? "text-xl"
+          : variant === "h6"
+          ? "text-lg"
+          : "text-normal"
+      }`}
+      style={style}
+    >
+      {children}
+    </div>
+  );
+};
