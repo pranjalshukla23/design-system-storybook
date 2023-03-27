@@ -46,12 +46,13 @@ const Template2 = (args) => {
           </Typography>
           <Badge
             label='AQR 4.3'
-            ratingIcon={<AiFillStar color='gold' />}
+            ratingIcon={<AiFillStar color='gold' className='text-sm' />}
             color='secondary'
             style={{
               color: "white",
               width: "92px",
               height: "24px",
+              fontSize: "12px",
             }}
           />
         </div>

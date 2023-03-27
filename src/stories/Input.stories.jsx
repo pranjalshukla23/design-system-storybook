@@ -38,17 +38,7 @@ export default {
         type: "text",
       },
     },
-    icon: {
-      description: "icon to view in the input component",
-      table: {
-        type: {
-          summary: "ReactElement | ReactNode",
-        },
-      },
-      control: {
-        type: null,
-      },
-    },
+
     variant: {
       description: "select the type of input field to render in the UI",
       table: {

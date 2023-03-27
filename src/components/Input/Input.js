@@ -10,7 +10,6 @@ export const Input = ({
   onChange: setValue,
   fullWidth,
   style,
-  icon,
   placeholder = "Enter something here",
 }) => {
   let scale = 1;
@@ -23,12 +22,11 @@ export const Input = ({
       <input
         id={id}
         name={name}
-        style={newStyle}
         type={type}
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-        className={` rounded-xl outline-none ${
+        className={` rounded-xl outline-0 focus:ring-0 focus:ring-inherit ${
           variant === "standard"
             ? "border-b-2 border-b-slate-300 "
             : variant === "filled"
@@ -37,8 +35,8 @@ export const Input = ({
         } ${fullWidth ? "w-full" : ""}
         
        `}
+        style={newStyle}
       />
-      <div className='absolute top-3 right-0'>{icon}</div>
     </div>
   );
 };

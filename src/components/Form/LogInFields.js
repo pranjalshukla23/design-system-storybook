@@ -25,18 +25,23 @@ function LogInFields() {
           value={email}
           onChange={setEmail}
           style={{
-            border: email.length > 0 && email.length < 5 ? "2px solid red" : "",
+            border:
+              email.length > 0 && email.length < 5
+                ? "3px solid rgba(222, 42, 44, 0.45)"
+                : email.length > 0
+                ? "3px solid rgba(31, 166, 93, 0.45)"
+                : "",
           }}
         />
         {email.length > 0 && email.length < 5 ? (
-          <MdErrorOutline className='absolute top-10 right-3 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-8 right-1 text-red-500' />
         ) : email.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-8 right-1 text-green-500' />
         )}
       </label>
-      <label htmlFor='password' className='relative w-full text-xs'>
+      <label htmlFor='firstName' className='relative w-full text-xs'>
         Password
         <Input
           className='w-full'
@@ -46,16 +51,23 @@ function LogInFields() {
           fullWidth={true}
           value={password}
           onChange={setPassword}
-          icon={
-            showPassword ? (
-              <AiOutlineEye onClick={() => setShowPassword(false)} />
-            ) : (
-              <AiOutlineEyeInvisible onClick={() => setShowPassword(true)} />
-            )
-          }
         />
+        {showPassword ? (
+          <AiOutlineEye
+            onClick={() => setShowPassword(false)}
+            className='absolute inset-y-8 right-1 '
+          />
+        ) : (
+          <AiOutlineEyeInvisible
+            onClick={() => setShowPassword(true)}
+            className='absolute inset-y-8 right-1 '
+          />
+        )}
       </label>
       <Button
+        style={{
+          marginTop: "36px",
+        }}
         label='Login'
         variant='contained'
         icon={<HiOutlineArrowNarrowRight />}

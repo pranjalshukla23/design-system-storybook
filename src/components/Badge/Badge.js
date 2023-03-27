@@ -7,7 +7,7 @@ export const Badge = ({
 }) => {
   return (
     <div
-      className={` max-w-fit text-black rounded-md px-2 py-1 text-center flex justify-between items-center text-xs ${
+      className={` max-w-fit text-black rounded-md px-2 py-1 text-center flex justify-between items-center text-sm ${
         color === "primary"
           ? "bg-[#E9EBFF]"
           : color === "secondary"
@@ -25,7 +25,7 @@ export const Badge = ({
           placeIcon === "left" ? "flex-row-reverse" : "flex-row"
         } items-center justify-between gap-1`}
       >
-        <div className=''>{label}</div>
+        <span>{label}</span>
 
         {placeIcon !== "hidden" && <div className=''>{ratingIcon}</div>}
       </div>

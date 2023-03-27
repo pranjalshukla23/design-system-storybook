@@ -97,6 +97,19 @@ export default {
         type: null,
       },
     },
+    placeIcon: {
+      description: "prop to set the position of icon",
+      options: ["left", "right", "hidden"],
+      defaultValue: "right",
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+      control: {
+        type: "radio",
+      },
+    },
     onClick: {
       description: "event to trigger on clicking the button",
       table: {

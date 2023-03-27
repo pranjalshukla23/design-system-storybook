@@ -10,6 +10,7 @@ export const Button = ({
   onMouseOver,
   onMouseOut,
   style,
+  placeIcon = "right",
 }) => {
   let scale = 1;
   if (size === "sm") scale = 0.95;
@@ -20,7 +21,7 @@ export const Button = ({
       onClick={onClick}
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
-      className={` text-base  font-bold rounded-lg w-52${
+      className={` text-base  font-bold rounded-lg w-64 ${
         color === "success"
           ? " text-white   bg-green-500"
           : color === "secondary"
@@ -41,10 +42,16 @@ export const Button = ({
       `}
       style={newStyle}
     >
-      <div className='w-full flex items-center justify-between'>
-        <div className='w-3/4 flex justify-center items-center'>{label}</div>
+      <div
+        className={`w-full flex ${
+          placeIcon === "left" ? "flex-row-reverse" : "flex-row"
+        } items-center justify-between gap-1`}
+      >
+        <span className='w-full  flex justify-center items-center'>
+          {label}
+        </span>
 
-        {icon}
+        {placeIcon !== "hidden" && <>{icon}</>}
       </div>
     </button>
   );

@@ -16,7 +16,7 @@ function SignUpFields() {
   return (
     <>
       <label htmlFor='firstName' className='relative w-full text-xs'>
-        First Name
+        <span className='px-1'> First Name </span>
         <Input
           type='text'
           id='firstName'
@@ -29,20 +29,22 @@ function SignUpFields() {
           style={{
             border:
               firstName.length > 0 && firstName.length < 5
-                ? "2px solid red"
+                ? "3px solid rgba(222, 42, 44, 0.45)"
+                : firstName.length > 0
+                ? "3px solid rgba(31, 166, 93, 0.45)"
                 : "",
           }}
         />
         {firstName.length > 0 && firstName.length < 5 ? (
-          <MdErrorOutline className='absolute top-10 right-3 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-8 right-1 text-red-500' />
         ) : firstName.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-8 right-1 text-green-500' />
         )}
       </label>
       <label htmlFor='lastName' className='relative w-full text-xs'>
-        Last Name
+        <span className='px-1'>Last Name </span>
         <Input
           className='w-full'
           type='text'
@@ -55,20 +57,24 @@ function SignUpFields() {
           required
           style={{
             border:
-              lastName.length > 0 && lastName.length < 5 ? "2px solid red" : "",
+              lastName.length > 0 && lastName.length < 5
+                ? "3px solid rgba(222, 42, 44, 0.45)"
+                : lastName.length > 0
+                ? "3px solid rgba(31, 166, 93, 0.45)"
+                : "",
           }}
         />
         {lastName.length > 0 && lastName.length < 5 ? (
-          <MdErrorOutline className='absolute top-10 right-3 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-8 right-1 text-red-500' />
         ) : lastName.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-8 right-1 text-green-500' />
         )}
       </label>
 
       <label htmlFor='email' className='relative w-full text-xs'>
-        Email
+        <span className='px-1'> Email </span>
         <Input
           className=' w-full'
           type='email'
@@ -79,42 +85,43 @@ function SignUpFields() {
           value={email}
           onChange={setEmail}
           style={{
-            border: email.length > 0 && email.length < 5 ? "2px solid red" : "",
+            border:
+              email.length > 0 && email.length < 5
+                ? "3px solid rgba(222, 42, 44, 0.45)"
+                : email.length > 0
+                ? "3px solid rgba(31, 166, 93, 0.45)"
+                : "",
           }}
         />
         {email.length > 0 && email.length < 5 ? (
-          <MdErrorOutline className='absolute top-10 right-3 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-8 right-1 text-red-500' />
         ) : email.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-8 right-1 text-green-500' />
         )}
       </label>
 
       <label htmlFor='address' className='relative w-full text-xs'>
-        Address
+        <span className='px-1'> Address </span>
         <textarea
           id='address'
           name='address'
           className='w-full rounded-xl border-1 border-bcolor'
           value={address}
           onChange={(e) => setAddress(e.target.value)}
-          style={{
-            border:
-              address.length > 0 && address.length < 5 ? "2px solid red" : "",
-          }}
         />
         {address.length > 0 && address.length < 5 ? (
-          <MdErrorOutline className='absolute top-10 right-3 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-8 right-1 text-red-500' />
         ) : address.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-8 right-1 text-green-500' />
         )}
       </label>
 
       <label htmlFor='state' className='relative w-full text-xs'>
-        State
+        <span className='px-1'> State </span>
         <select
           id='state'
           name='state'
@@ -122,10 +129,6 @@ function SignUpFields() {
           value={state}
           onChange={(e) => {
             setState(e.target.value);
-          }}
-          style={{
-            border:
-              state.length > 0 && pinCode.length < 5 ? "2px solid red" : "",
           }}
         >
           <option value='Karnataka'>Karnataka</option>
@@ -139,7 +142,7 @@ function SignUpFields() {
       </label>
 
       <label htmlFor='pinCode' className='relative w-full text-xs'>
-        Pin Code
+        <span className='px-1'>Pin Code</span>
         <Input
           className='w-full'
           type='text'
@@ -151,19 +154,26 @@ function SignUpFields() {
           onChange={setPinCode}
           style={{
             border:
-              pinCode.length > 0 && pinCode.length < 5 ? "2px solid red" : "",
+              pinCode.length > 0 && pinCode.length < 5
+                ? "3px solid rgba(222, 42, 44, 0.45)"
+                : pinCode.length > 0
+                ? "3px solid rgba(31, 166, 93, 0.45)"
+                : "",
           }}
         />
         {pinCode.length > 0 && pinCode.length < 5 ? (
-          <MdErrorOutline className='absolute top-10 right-3 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-8 right-1 text-red-500' />
         ) : pinCode.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-8 right-1 text-green-500' />
         )}
       </label>
       <Button
-        label='Sign Up'
+        style={{
+          marginTop: "36px",
+        }}
+        label='Submit'
         variant='contained'
         icon={<HiOutlineArrowNarrowRight />}
       />
