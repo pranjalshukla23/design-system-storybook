@@ -10,6 +10,7 @@ export const Input = ({
   onChange: setValue,
   fullWidth,
   style,
+  icon,
   placeholder = "Enter something here",
 }) => {
   let scale = 1;
@@ -18,7 +19,7 @@ export const Input = ({
   const newStyle = { ...style, padding: `${scale * 0.5}rem ${scale * 1}rem` };
 
   return (
-    <>
+    <div className='relative'>
       <input
         id={id}
         name={name}
@@ -27,16 +28,17 @@ export const Input = ({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-        className={` rounded-md outline-none ${
+        className={` rounded-xl outline-none ${
           variant === "standard"
             ? "border-b-2 border-b-slate-300 "
             : variant === "filled"
             ? "border-b-2 border-b-gray-500 bg-blue-500"
-            : "border-2 border-gray-300"
+            : "border-1 border-bcolor"
         } ${fullWidth ? "w-full" : ""}
         
        `}
       />
-    </>
+      <div className='absolute top-3 right-0'>{icon}</div>
+    </div>
   );
 };

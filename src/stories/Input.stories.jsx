@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {Input} from "../components/Input";
+import { Input } from "../components/Input";
 
 //define a folder
 export default {
@@ -8,19 +8,19 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'This is a input field component for UI',
+        component: "This is a input field component for UI",
       },
     },
   },
 
   //define arguments which will be passed to template
   argTypes: {
-     id: {
-      description: 'set ID attribute of input field',
-      
+    id: {
+      description: "set ID attribute of input field",
+
       table: {
-        type: { 
-          summary: 'string', 
+        type: {
+          summary: "string",
         },
       },
       control: {
@@ -28,67 +28,78 @@ export default {
       },
     },
     name: {
-      description: 'set name attribute of input field',
+      description: "set name attribute of input field",
       table: {
-        type: { 
-          summary: 'string', 
+        type: {
+          summary: "string",
         },
       },
       control: {
         type: "text",
       },
     },
-    variant: {
-      description: 'select the type of input field to render in the UI',
+    icon: {
+      description: "icon to view in the input component",
       table: {
-        type: { 
-          summary: 'string', 
+        type: {
+          summary: "ReactElement | ReactNode",
+        },
+      },
+      control: {
+        type: null,
+      },
+    },
+    variant: {
+      description: "select the type of input field to render in the UI",
+      table: {
+        type: {
+          summary: "string",
         },
       },
       defaultValue: "outlined",
-      options: ['standard', 'outlined', 'filled'],
+      options: ["standard", "outlined", "filled"],
       control: {
         type: "radio",
       },
     },
     type: {
-      description: 'select the type of input field',
+      description: "select the type of input field",
       table: {
-        type: { 
-          summary: 'string', 
+        type: {
+          summary: "string",
         },
       },
-      options: ['email', 'text', 'password', 'number'],
+      options: ["email", "text", "password", "number"],
       control: {
         type: "select",
       },
     },
     size: {
-      description: 'select the size of input field',
-      defaultValue: 'sm',
+      description: "select the size of input field",
+      defaultValue: "sm",
       table: {
-        type: { 
-          summary: 'string', 
+        type: {
+          summary: "string",
         },
       },
-      options: ['sm', 'md', 'lg'],
+      options: ["sm", "md", "lg"],
       control: {
         type: "radio",
       },
     },
     placeholder: {
-      description: 'enter the placeholder for input field',
+      description: "enter the placeholder for input field",
       table: {
-        type: { 
-          summary: 'string', 
+        type: {
+          summary: "string",
         },
       },
     },
     fullWidth: {
-      description: 'prop to set the width of input field to 100% of container',
+      description: "prop to set the width of input field to 100% of container",
       table: {
-        type: { 
-          summary: 'boolean', 
+        type: {
+          summary: "boolean",
         },
       },
       options: [true, false],
@@ -97,19 +108,19 @@ export default {
       },
     },
     style: {
-      description: 'prop to style the input component',
+      description: "prop to style the input component",
       defaultValue: {},
       table: {
-        type: { 
-          summary: 'object', 
+        type: {
+          summary: "object",
         },
       },
     },
     value: {
-      description: 'set value of input field',
+      description: "set value of input field",
       table: {
-        type: { 
-          summary: 'string', 
+        type: {
+          summary: "string",
         },
       },
       control: {
@@ -117,10 +128,10 @@ export default {
       },
     },
     onChange: {
-      description: 'event to update the value to store in input field',
+      description: "event to update the value to store in input field",
       table: {
-        type: { 
-          summary: '((event?: MouseEvent<HTMLDivElement, MouseEvent>) => void)', 
+        type: {
+          summary: "((event?: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
         },
       },
     },
@@ -131,29 +142,22 @@ export default {
 // you create a template using a component
 //template can accept arguments which can be passed as props to component
 const Template = (args) => {
+  const [value, setValue] = useState("");
 
-  const [value, setValue] = useState("")
-
-  return (
-    <Input {...args} val={value} setValue={setValue}/>
-  )
-}
+  return <Input {...args} val={value} setValue={setValue} />;
+};
 
 //story #1 - input
 //create story from a template
 export const input = Template.bind({});
 
-
-//customize source code 
+//customize source code
 input.parameters = {
   docs: {
     source: {
-      code: 'import {Input} from design-system-betaflux/Input',
+      code: "import {Input} from design-system-betaflux/Input",
       language: "javascript",
       type: "auto",
     },
   },
 };
-
-
-

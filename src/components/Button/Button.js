@@ -1,50 +1,51 @@
 import React from "react";
 
 export const Button = ({
-  label = "click here",
+  label = "Submit",
   color = "primary",
   size = "sm",
   variant = "contained",
+  icon,
   onClick,
   onMouseOver,
   onMouseOut,
   style,
 }) => {
   let scale = 1;
-  if (size === "sm") scale = 0.75;
+  if (size === "sm") scale = 0.95;
   if (size === "lg") scale = 1.5;
   const newStyle = { ...style, padding: `${scale * 0.5}rem ${scale * 1}rem` };
   return (
     <button
-      style={newStyle}
       onClick={onClick}
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
-      className={` text-center text-2xl border-2 rounded-md w-52 ${
+      className={` text-base  font-bold rounded-lg w-52${
         color === "success"
-          ? "border-1 rounded-md border-inherit bg-green-400 text-black"
+          ? " text-white   bg-green-500"
           : color === "secondary"
-          ? "border-0 text-black bg-purple-400"
+          ? " text-white  bg-purple-400"
           : color === "error"
-          ? "border-2 border-red-500 rounded-md text-black font-bold bg-red-500"
+          ? " text-white   font-bold bg-red-500"
           : color === "primary"
-          ? "border-0 text-black bg-blue-600"
-          : "border-0 text-black bg-inherit"
+          ? " text-white bg-[#1B2054]"
+          : " text-black bg-none border-2"
       }
 
       ${
         variant === "text"
-          ? "border-0 text-black"
-          : variant === "contained"
-          ? "bg-blue-600 text-black rounded-md"
-          : variant === "outlined"
-          ? "border-2 border-blue-400 text-black bg-inherit"
-          : ""
+          ? "border-none bg-none text-black"
+          : "border-none bg-[#1B2054] text-white"
       }
 
       `}
+      style={newStyle}
     >
-      {label}
+      <div className='w-full flex items-center justify-between'>
+        <div className='w-3/4 flex justify-center items-center'>{label}</div>
+
+        {icon}
+      </div>
     </button>
   );
 };

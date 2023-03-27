@@ -1,8 +1,8 @@
-export const Typography = ({ children, style, variant }) => {
+export const Typography = ({ children, style, variant = "default" }) => {
   console.log(variant);
   return (
     <div
-      className={` ${
+      className={` leading-4 ${
         variant === "h1"
           ? "text-6xl"
           : variant === "h2"

@@ -3,6 +3,7 @@ import { Input } from "../Input";
 import { MdErrorOutline } from "react-icons/md";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { Button } from "../Button";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 function SignUpFields() {
   const [firstName, setFirstName] = useState("");
@@ -14,10 +15,9 @@ function SignUpFields() {
 
   return (
     <>
-      <label htmlFor='firstName' className='relative w-full'>
+      <label htmlFor='firstName' className='relative w-full text-xs'>
         First Name
         <Input
-          className='w-full'
           type='text'
           id='firstName'
           name='firstName'
@@ -41,7 +41,7 @@ function SignUpFields() {
           <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
         )}
       </label>
-      <label htmlFor='lastName' className='relative w-full'>
+      <label htmlFor='lastName' className='relative w-full text-xs'>
         Last Name
         <Input
           className='w-full'
@@ -67,7 +67,7 @@ function SignUpFields() {
         )}
       </label>
 
-      <label htmlFor='email' className='relative w-full'>
+      <label htmlFor='email' className='relative w-full text-xs'>
         Email
         <Input
           className=' w-full'
@@ -91,12 +91,12 @@ function SignUpFields() {
         )}
       </label>
 
-      <label htmlFor='address' className='relative w-full'>
+      <label htmlFor='address' className='relative w-full text-xs'>
         Address
         <textarea
           id='address'
           name='address'
-          className='w-full border-2'
+          className='w-full rounded-xl border-1 border-bcolor'
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           style={{
@@ -113,12 +113,12 @@ function SignUpFields() {
         )}
       </label>
 
-      <label htmlFor='state' className='relative w-full'>
+      <label htmlFor='state' className='relative w-full text-xs'>
         State
         <select
           id='state'
           name='state'
-          className='w-full border-2 p-2'
+          className='w-full border-1 border-bcolor rounded-xl p-2'
           value={state}
           onChange={(e) => {
             setState(e.target.value);
@@ -138,7 +138,7 @@ function SignUpFields() {
         </select>
       </label>
 
-      <label htmlFor='pinCode' className='relative w-full'>
+      <label htmlFor='pinCode' className='relative w-full text-xs'>
         Pin Code
         <Input
           className='w-full'
@@ -162,7 +162,11 @@ function SignUpFields() {
           <AiOutlineCheckCircle className='absolute top-10 right-3 text-green-500' />
         )}
       </label>
-      <Button label='Sign up' variant='contained' />
+      <Button
+        label='Sign Up'
+        variant='contained'
+        icon={<HiOutlineArrowNarrowRight />}
+      />
     </>
   );
 }
