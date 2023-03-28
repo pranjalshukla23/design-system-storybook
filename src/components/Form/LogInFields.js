@@ -34,11 +34,11 @@ function LogInFields() {
           }}
         />
         {email.length > 0 && email.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-8 right-1 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-8 right-4 text-red-500' />
         ) : email.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-8 right-1 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-8 right-4 text-green-500' />
         )}
       </label>
       <label htmlFor='firstName' className='relative w-full text-xs'>
@@ -55,12 +55,12 @@ function LogInFields() {
         {showPassword ? (
           <AiOutlineEye
             onClick={() => setShowPassword(false)}
-            className='absolute inset-y-8 right-1 '
+            className='absolute inset-y-8 right-4 '
           />
         ) : (
           <AiOutlineEyeInvisible
             onClick={() => setShowPassword(true)}
-            className='absolute inset-y-8 right-1 '
+            className='absolute inset-y-8 right-4 '
           />
         )}
       </label>

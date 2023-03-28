@@ -15,7 +15,7 @@ export const Typography = ({ children, style, variant = "default" }) => {
           ? "text-xl"
           : variant === "h6"
           ? "text-lg"
-          : "text-normal"
+          : "text-base"
       }`}
       style={style}
     >

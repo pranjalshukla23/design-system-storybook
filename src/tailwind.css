@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* select option {
+  background: #e9ebff !important;
+  border: 2px solid red;
+} */

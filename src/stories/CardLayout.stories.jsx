@@ -87,9 +87,9 @@ const Template2 = (args) => {
           </Typography>
         </div>
         {/* text container */}
-        <div className='flex justify-between items-center w-full mt-0'>
+        <div className='flex justify-between items-center w-full pr-2 gap-2'>
           {/* text 1 */}
-          <div className='flex justify-center items-center gap-2'>
+          <div className='flex justify-center items-center'>
             <Typography
               style={{
                 color: "#979BA2",
@@ -102,6 +102,7 @@ const Template2 = (args) => {
               style={{
                 fontWeight: "bold",
                 fontSize: "12px",
+                paddingRight: "6px",
               }}
             >
               8.76%
@@ -110,7 +111,7 @@ const Template2 = (args) => {
           </div>
 
           {/* text 2 */}
-          <div className='flex justify-center items-center  gap-2'>
+          <div className='flex justify-center items-center  '>
             <Typography
               style={{
                 color: "#979BA2",
@@ -123,6 +124,7 @@ const Template2 = (args) => {
               style={{
                 fontWeight: "bold",
                 fontSize: "12px",
+                paddingRight: "6px",
               }}
             >
               13.19%
@@ -131,7 +133,7 @@ const Template2 = (args) => {
           </div>
 
           {/* text 3 */}
-          <div className='flex justify-center items-center  gap-2'>
+          <div className='flex justify-center items-center '>
             <Typography
               style={{
                 color: "#979BA2",
@@ -144,11 +146,11 @@ const Template2 = (args) => {
               style={{
                 fontWeight: "bold",
                 fontSize: "12px",
+                paddingRight: "6px",
               }}
             >
               22.15%
             </Typography>
-            |
           </div>
 
           {/* text 4 */}
@@ -172,12 +174,16 @@ const Template2 = (args) => {
           ratingIcon={<AiFillStar color='gold' />}
           style={{
             fontSize: "10px",
+            color: "#4F5051",
+            fontWeight: "500px",
           }}
         />
         <Badge
           label={"MorningStar 4.3"}
           style={{
             fontSize: "10px",
+            color: "#4F5051",
+            fontWeight: "500px",
           }}
           ratingIcon={<AiFillStar color='gold' />}
         />
@@ -185,6 +191,8 @@ const Template2 = (args) => {
           label={"Value Research 4.2"}
           style={{
             fontSize: "10px",
+            color: "#4F5051",
+            fontWeight: "500px",
           }}
           ratingIcon={<AiFillStar color='gold' />}
         />
@@ -199,8 +207,8 @@ const Template2 = (args) => {
           }}
         />
         <div className='icons flex gap-2'>
-          <AiOutlineShareAlt />
-          <CiBookmark />
+          <AiOutlineShareAlt className='text-[#1B2054]' />
+          <CiBookmark className='text-[#1B2054]' />
         </div>
       </div>
     </Card>
