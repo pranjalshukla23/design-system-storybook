@@ -26,7 +26,7 @@ export const Input = ({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-        className={` rounded-xl outline-0 focus:ring-0 focus:ring-inherit ${
+        className={` font-normal rounded-xl outline-0 focus:ring-0 focus:ring-inherit ${
           variant === "standard"
             ? "border-b-2 border-b-slate-300 "
             : variant === "filled"

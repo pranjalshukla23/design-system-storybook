@@ -36,11 +36,11 @@ function SignUpFields() {
           }}
         />
         {firstName.length > 0 && firstName.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-8 right-4 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : firstName.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-8 right-4 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
       <label htmlFor='lastName' className='relative w-full text-xs'>
@@ -65,11 +65,11 @@ function SignUpFields() {
           }}
         />
         {lastName.length > 0 && lastName.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-8 right-4 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : lastName.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-8 right-4 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
 
@@ -94,11 +94,11 @@ function SignUpFields() {
           }}
         />
         {email.length > 0 && email.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-8 right-4 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : email.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-8 right-4 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
 
@@ -112,11 +112,11 @@ function SignUpFields() {
           onChange={(e) => setAddress(e.target.value)}
         />
         {address.length > 0 && address.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-8 right-4 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : address.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-8 right-4 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
 
@@ -125,7 +125,7 @@ function SignUpFields() {
         <select
           id='state'
           name='state'
-          className='w-full border-1 border-bcolor rounded-xl p-2'
+          className='font-normal w-full border-1 border-bcolor rounded-xl p-2'
           value={state}
           onChange={(e) => {
             setState(e.target.value);
@@ -162,11 +162,11 @@ function SignUpFields() {
           }}
         />
         {pinCode.length > 0 && pinCode.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-8 right-4 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : pinCode.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-8 right-4 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
       <Button

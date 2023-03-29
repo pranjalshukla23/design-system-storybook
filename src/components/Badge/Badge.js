@@ -7,7 +7,7 @@ export const Badge = ({
 }) => {
   return (
     <div
-      className={` max-w-fit text-black rounded-lg px-2 py-1 text-center flex justify-between items-center text-sm ${
+      className={` max-w-fit text-black rounded-lg px-2 py-1 text-center flex justify-between items-center text-xs ${
         color === "primary"
           ? "bg-[#E9EBFF]"
           : color === "secondary"

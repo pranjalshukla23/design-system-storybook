@@ -34,11 +34,11 @@ function LogInFields() {
           }}
         />
         {email.length > 0 && email.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-8 right-4 text-red-500' />
+          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : email.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-8 right-4 text-green-500' />
+          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
       <label htmlFor='firstName' className='relative w-full text-xs'>

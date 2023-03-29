@@ -5,7 +5,9 @@ import { AiFillStar } from "react-icons/ai";
 import { Checkbox } from "../components/Checkbox";
 import { useState } from "react";
 import { AiOutlineShareAlt } from "react-icons/ai";
-import { CiBookmark } from "react-icons/ci";
+import { GrShareOption } from "react-icons/gr";
+import { FiBookmark } from "react-icons/fi";
+import starIcon from "../images/star.svg";
 
 //define a folder
 export default {
@@ -33,8 +35,8 @@ const Template2 = (args) => {
         height: "198px",
       }}
     >
-      <div className='flex flex-col  gap-1'>
-        <div className=' flex justify-between items-center w-full '>
+      <div className='flex flex-col items-center justify-center'>
+        <div className=' flex justify-between items-start w-full  py-1'>
           <Typography
             style={{
               width: "70%",
@@ -47,7 +49,8 @@ const Template2 = (args) => {
           </Typography>
           <Badge
             label='AQR 4.3'
-            ratingIcon={<AiFillStar color='gold' className='text-base' />}
+            // ratingIcon={<AiFillStar color='gold' className='text-base' />}
+            ratingIcon={<img src={starIcon} />}
             color='secondary'
             style={{
               color: "white",
@@ -175,7 +178,8 @@ const Template2 = (args) => {
       <div className=' flex justify-between  w-full '>
         <Badge
           label={"Crisil 4.2"}
-          ratingIcon={<AiFillStar color='gold' className='text-xs' />}
+          // ratingIcon={<AiFillStar color='gold' className='text-xs' />}
+          ratingIcon={<img src={starIcon} />}
           style={{
             fontSize: "10px",
             color: "#4F5051",
@@ -194,7 +198,8 @@ const Template2 = (args) => {
             height: "20px",
             borderRadius: "4px",
           }}
-          ratingIcon={<AiFillStar color='gold' className='text-xs' />}
+          // ratingIcon={<AiFillStar color='gold' className='text-xs' />}
+          ratingIcon={<img src={starIcon} />}
         />
         <Badge
           label={"Value Research 4.2"}
@@ -206,7 +211,8 @@ const Template2 = (args) => {
             height: "20px",
             borderRadius: "4px",
           }}
-          ratingIcon={<AiFillStar color='gold' className='text-xs' />}
+          // ratingIcon={<AiFillStar color='gold' className='text-xs' />}
+          ratingIcon={<img src={starIcon} />}
         />
       </div>
       <div className=' flex justify-between items-center w-full'>
@@ -219,8 +225,8 @@ const Template2 = (args) => {
           }}
         />
         <div className='icons flex gap-2 justify-center items-center'>
-          <AiOutlineShareAlt className='text-[#1B2054]' />
-          <CiBookmark className='text-[#1B2054] text-sm font-bold' />
+          <GrShareOption className='text-[#1B2054]' />
+          <FiBookmark className='text-[#1B2054]' />
         </div>
       </div>
     </Card>

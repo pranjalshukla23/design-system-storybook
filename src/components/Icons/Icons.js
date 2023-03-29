@@ -40,7 +40,7 @@ const iconsList = [
 
 export const Icons = ({}) => {
   return (
-    <div className='grid grid-cols-3 gap-4  w-1/2'>
+    <div className='grid grid-cols-3 gap-4  w-3/4'>
       {iconsList.map((icon) => (
         <Icon icon={icon} />
       ))}
