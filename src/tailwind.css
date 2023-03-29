@@ -7,3 +7,9 @@
   background: #e9ebff !important;
   border: 2px solid red;
 } */
+
+@layer base {
+  input:not(:focus) {
+    border: 1px solid rgba(24, 24, 24, 0.25) !important;
+  }
+}

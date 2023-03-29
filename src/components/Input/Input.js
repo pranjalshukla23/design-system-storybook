@@ -1,6 +1,7 @@
 import React from "react";
 
 export const Input = ({
+  className,
   id,
   name,
   variant = "outlined",
@@ -18,7 +19,7 @@ export const Input = ({
   const newStyle = { ...style, padding: `${scale * 0.5}rem ${scale * 1}rem` };
 
   return (
-    <div className='relative'>
+    <div className={`${className} relative`}>
       <input
         id={id}
         name={name}
@@ -26,7 +27,7 @@ export const Input = ({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-        className={` font-normal rounded-xl outline-0 focus:ring-0 focus:ring-inherit ${
+        className={` font-normal rounded-xl outline-0 focus:border-[3px] focus:border-blue-500 focus:ring-0 focus:ring-inherit ${
           variant === "standard"
             ? "border-b-2 border-b-slate-300 "
             : variant === "filled"

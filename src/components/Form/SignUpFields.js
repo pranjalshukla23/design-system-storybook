@@ -18,6 +18,7 @@ function SignUpFields() {
       <label htmlFor='firstName' className='relative w-full text-xs'>
         <span className='px-1 text-[#181818] font-normal'> First Name </span>
         <Input
+          className={"peer"}
           type='text'
           id='firstName'
           name='firstName'
@@ -36,17 +37,20 @@ function SignUpFields() {
           }}
         />
         {firstName.length > 0 && firstName.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
+          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : firstName.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
+          <AiOutlineCheckCircle className='peer-focus-within:block hidden  absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
-      <label htmlFor='lastName' className='relative w-full text-xs'>
+      <label
+        htmlFor='lastName'
+        className='relative w-full text-xs peer-focus:text-red-500'
+      >
         <span className='px-1 text-[#181818] font-normal'>Last Name </span>
         <Input
-          className='w-full'
+          className={"peer"}
           type='text'
           id='lastName'
           name='lastName'
@@ -65,18 +69,18 @@ function SignUpFields() {
           }}
         />
         {lastName.length > 0 && lastName.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
+          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : lastName.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
+          <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
 
       <label htmlFor='email' className='relative w-full text-xs'>
         <span className='px-1 text-[#181818] font-normal'> Email </span>
         <Input
-          className=' w-full'
+          className={"peer"}
           type='email'
           id='email'
           name='email'
@@ -94,11 +98,11 @@ function SignUpFields() {
           }}
         />
         {email.length > 0 && email.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
+          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : email.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
+          <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
 
@@ -107,16 +111,16 @@ function SignUpFields() {
         <textarea
           id='address'
           name='address'
-          className='w-full rounded-xl border-1 border-bcolor'
+          className='peer w-full rounded-xl border-1 border-bcolor'
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
         {address.length > 0 && address.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
+          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : address.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
+          <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
 
@@ -144,7 +148,7 @@ function SignUpFields() {
       <label htmlFor='pinCode' className='relative w-full text-xs'>
         <span className='px-1 text-[#181818] font-normal'>Pin Code</span>
         <Input
-          className='w-full'
+          className={"peer"}
           type='text'
           id='pinCode'
           name='pinCode'
@@ -162,11 +166,11 @@ function SignUpFields() {
           }}
         />
         {pinCode.length > 0 && pinCode.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
+          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : pinCode.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
+          <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
       <Button

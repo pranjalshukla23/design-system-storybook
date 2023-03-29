@@ -1,13 +1,13 @@
 import { Card } from "../components/Card";
 import { Typography } from "../components/Typography";
 import { Badge } from "../components/Badge";
-import { AiFillStar } from "react-icons/ai";
 import { Checkbox } from "../components/Checkbox";
 import { useState } from "react";
-import { AiOutlineShareAlt } from "react-icons/ai";
-import { GrShareOption } from "react-icons/gr";
-import { FiBookmark } from "react-icons/fi";
 import starIcon from "../images/star.svg";
+import shareIcon from "../images/share.svg";
+import shareFillIcon from "../images/shareFill.svg";
+import bookmarkIcon from "../images/bookmark.svg";
+import bookmarkFillIcon from "../images/bookmarkFill.svg";
 
 //define a folder
 export default {
@@ -25,8 +25,13 @@ export default {
 //define a template for creating story
 // you create a template using a component
 //template can accept arguments which can be passed as props to component
-const Template2 = (args) => {
-  const [value, setValue] = useState("");
+const Template2 = ({
+  showFilledShareIcon,
+  showFilledBookmarkIcon,
+  ...args
+}) => {
+  const [showFillShare, setShowFillShare] = useState(false);
+  const [showFillBookmark, setShowFillBookmark] = useState(false);
 
   return (
     <Card
@@ -224,9 +229,41 @@ const Template2 = (args) => {
             fontSize: "10px",
           }}
         />
-        <div className='icons flex gap-2 justify-center items-center'>
-          <GrShareOption className='text-[#1B2054]' />
-          <FiBookmark className='text-[#1B2054]' />
+        <div className='icons flex gap-4 justify-center items-center'>
+          {showFillShare || showFilledShareIcon ? (
+            <img
+              className='cursor-pointer'
+              width={"12px"}
+              height={"13.33px"}
+              src={shareFillIcon}
+              onClick={() => setShowFillShare(!showFillShare)}
+            />
+          ) : (
+            <img
+              className='cursor-pointer'
+              width={"12px"}
+              height={"13.33px"}
+              src={shareIcon}
+              onClick={() => setShowFillShare(!showFillShare)}
+            />
+          )}
+          {showFillBookmark || showFilledBookmarkIcon ? (
+            <img
+              className='cursor-pointer'
+              width={"9.33px"}
+              height={"11.66px"}
+              src={bookmarkFillIcon}
+              onClick={() => setShowFillBookmark(!showFillBookmark)}
+            />
+          ) : (
+            <img
+              className='cursor-pointer'
+              width={"9.33px"}
+              height={"11.66px"}
+              src={bookmarkIcon}
+              onClick={() => setShowFillBookmark(!showFillBookmark)}
+            />
+          )}
         </div>
       </div>
     </Card>
@@ -236,3 +273,8 @@ const Template2 = (args) => {
 //story #2 - card
 //create story from a template
 export const card = Template2.bind({});
+
+card.args = {
+  showFilledShareIcon: true,
+  showFilledBookmarkIcon: true,
+};

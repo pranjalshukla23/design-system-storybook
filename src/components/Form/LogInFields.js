@@ -16,7 +16,7 @@ function LogInFields() {
       <label htmlFor='email' className='relative w-full text-xs'>
         <span className='px-1 text-[#181818] font-normal'>Email</span>
         <Input
-          className=' w-full'
+          className='peer'
           type='email'
           id='email'
           name='email'
@@ -34,17 +34,17 @@ function LogInFields() {
           }}
         />
         {email.length > 0 && email.length < 5 ? (
-          <MdErrorOutline className='absolute inset-y-7 right-4 text-[#E46869] text-base' />
+          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#E46869] text-base' />
         ) : email.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='absolute inset-y-7 right-4 text-[#42C87F] text-base' />
+          <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#42C87F] text-base' />
         )}
       </label>
       <label htmlFor='firstName' className='relative w-full text-xs'>
         <span className='px-1 text-[#181818] font-normal'>Password</span>
         <Input
-          className='w-full'
+          className='peer'
           type={`${showPassword ? "text" : "password"}`}
           id='password'
           name='password'
