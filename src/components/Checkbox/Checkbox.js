@@ -9,7 +9,7 @@ export const Checkbox = ({
 }) => {
   return (
     <div style={style}>
-      <label className='flex justify-between items-center text-xs gap-2 max-w-fit '>
+      <label className='flex justify-between items-center gap-2 max-w-fit '>
         <input
           type='checkbox'
           id={id}
@@ -20,7 +20,7 @@ export const Checkbox = ({
             color === "primary" ? "text-[#1B2054]" : "text-pink-600"
           } focus:ring-0 rounded-full w-5 h-5 border-2 border-[#1B2054]`}
         />{" "}
-        <span className='text-gray-600 font-bold'>{label}</span>
+        <span className='leading-3'>{label}</span>
       </label>
     </div>
   );

@@ -37,22 +37,22 @@ const Template2 = (args) => {
         <div className=' flex justify-between items-center w-full '>
           <Typography
             style={{
-              width: "60%",
-              fontWeight: "bold",
+              width: "70%",
+              fontWeight: "600",
               fontFamily: "Inter",
+              color: "#181818",
             }}
           >
             Kotak Standard Multicap Regular Group
           </Typography>
           <Badge
             label='AQR 4.3'
-            ratingIcon={<AiFillStar color='gold' className='text-sm' />}
+            ratingIcon={<AiFillStar color='gold' className='text-base' />}
             color='secondary'
             style={{
               color: "white",
               width: "92px",
               height: "24px",
-              fontSize: "12px",
             }}
           />
         </div>
@@ -60,6 +60,7 @@ const Template2 = (args) => {
           <Typography
             style={{
               fontSize: "10px",
+              color: "#181818",
             }}
           >
             Equity MF | MultiCap
@@ -67,12 +68,13 @@ const Template2 = (args) => {
         </div>
       </div>
 
-      <div className='flex flex-col  w-full'>
+      <div className='flex flex-col  w-full '>
         <div className=' flex justify-between items-center w-full'>
           <Typography
             style={{
               fontSize: "10px",
               color: "#979BA2",
+              lineHeight: "12px",
             }}
           >
             Returns
@@ -81,83 +83,85 @@ const Template2 = (args) => {
             style={{
               fontSize: "10px",
               color: "#979BA2",
+              lineHeight: "12px",
             }}
           >
             Scheme Size
           </Typography>
         </div>
         {/* text container */}
-        <div className='flex justify-between items-center w-full pr-2 gap-2'>
+        <div className='flex justify-between items-center w-full pr-2 '>
           {/* text 1 */}
-          <div className='flex justify-center items-center'>
-            <Typography
-              style={{
-                color: "#979BA2",
-                fontSize: "12px",
-              }}
-            >
-              1 yr:
-            </Typography>
-            <Typography
-              style={{
-                fontWeight: "bold",
-                fontSize: "12px",
-                paddingRight: "6px",
-              }}
-            >
-              8.76%
-            </Typography>
-            |
+          <div className='flex justify-between items-center '>
+            <div className='text  flex'>
+              <Typography
+                style={{
+                  color: "#979BA2",
+                  fontSize: "12px",
+                }}
+              >
+                1 yr:
+              </Typography>
+              <Typography
+                style={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                }}
+              >
+                8.76%
+              </Typography>
+            </div>
           </div>
-
+          <div className='bar'>|</div>
           {/* text 2 */}
-          <div className='flex justify-center items-center  '>
-            <Typography
-              style={{
-                color: "#979BA2",
-                fontSize: "12px",
-              }}
-            >
-              3 yr:
-            </Typography>
-            <Typography
-              style={{
-                fontWeight: "bold",
-                fontSize: "12px",
-                paddingRight: "6px",
-              }}
-            >
-              13.19%
-            </Typography>
-            |
+          <div className='flex justify-between items-center  '>
+            <div className='text  flex'>
+              <Typography
+                style={{
+                  color: "#979BA2",
+                  fontSize: "12px",
+                }}
+              >
+                3 yr:
+              </Typography>
+              <Typography
+                style={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                }}
+              >
+                13.19%
+              </Typography>
+            </div>
           </div>
-
+          <div className='bar'>|</div>
           {/* text 3 */}
-          <div className='flex justify-center items-center '>
-            <Typography
-              style={{
-                color: "#979BA2",
-                fontSize: "12px",
-              }}
-            >
-              5 yr:
-            </Typography>
-            <Typography
-              style={{
-                fontWeight: "bold",
-                fontSize: "12px",
-                paddingRight: "6px",
-              }}
-            >
-              22.15%
-            </Typography>
+          <div className='flex justify-between items-center'>
+            <div className='text  flex'>
+              <Typography
+                style={{
+                  color: "#979BA2",
+                  fontSize: "12px",
+                }}
+              >
+                5 yr:
+              </Typography>
+              <Typography
+                style={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                }}
+              >
+                22.15%
+              </Typography>
+            </div>
           </div>
 
           {/* text 4 */}
-          <div className='flex justify-center items-center  gap-2'>
+          <div className='flex justify-center items-center '>
             <Typography
               style={{
-                fontWeight: "bold",
+                fontWeight: "600",
                 fontSize: "12px",
               }}
             >
@@ -168,14 +172,16 @@ const Template2 = (args) => {
       </div>
 
       {/* portfolio container */}
-      <div className=' flex justify-between items-center w-full'>
+      <div className=' flex justify-between  w-full '>
         <Badge
           label={"Crisil 4.2"}
-          ratingIcon={<AiFillStar color='gold' />}
+          ratingIcon={<AiFillStar color='gold' className='text-xs' />}
           style={{
             fontSize: "10px",
             color: "#4F5051",
             fontWeight: "500px",
+            height: "20px",
+            borderRadius: "4px",
           }}
         />
         <Badge
@@ -184,8 +190,11 @@ const Template2 = (args) => {
             fontSize: "10px",
             color: "#4F5051",
             fontWeight: "500px",
+
+            height: "20px",
+            borderRadius: "4px",
           }}
-          ratingIcon={<AiFillStar color='gold' />}
+          ratingIcon={<AiFillStar color='gold' className='text-xs' />}
         />
         <Badge
           label={"Value Research 4.2"}
@@ -193,8 +202,11 @@ const Template2 = (args) => {
             fontSize: "10px",
             color: "#4F5051",
             fontWeight: "500px",
+
+            height: "20px",
+            borderRadius: "4px",
           }}
-          ratingIcon={<AiFillStar color='gold' />}
+          ratingIcon={<AiFillStar color='gold' className='text-xs' />}
         />
       </div>
       <div className=' flex justify-between items-center w-full'>
@@ -206,9 +218,9 @@ const Template2 = (args) => {
             fontSize: "10px",
           }}
         />
-        <div className='icons flex gap-2'>
+        <div className='icons flex gap-2 justify-center items-center'>
           <AiOutlineShareAlt className='text-[#1B2054]' />
-          <CiBookmark className='text-[#1B2054]' />
+          <CiBookmark className='text-[#1B2054] text-sm font-bold' />
         </div>
       </div>
     </Card>

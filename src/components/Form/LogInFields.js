@@ -14,7 +14,7 @@ function LogInFields() {
   return (
     <>
       <label htmlFor='email' className='relative w-full text-xs'>
-        Email
+        <span className='px-1 text-[#181818] font-normal'>Email</span>
         <Input
           className=' w-full'
           type='email'
@@ -42,7 +42,7 @@ function LogInFields() {
         )}
       </label>
       <label htmlFor='firstName' className='relative w-full text-xs'>
-        Password
+        <span className='px-1 text-[#181818] font-normal'>Password</span>
         <Input
           className='w-full'
           type={`${showPassword ? "text" : "password"}`}

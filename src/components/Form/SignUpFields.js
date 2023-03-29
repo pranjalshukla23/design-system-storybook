@@ -16,7 +16,7 @@ function SignUpFields() {
   return (
     <>
       <label htmlFor='firstName' className='relative w-full text-xs'>
-        <span className='px-1'> First Name </span>
+        <span className='px-1 text-[#181818] font-normal'> First Name </span>
         <Input
           type='text'
           id='firstName'
@@ -44,7 +44,7 @@ function SignUpFields() {
         )}
       </label>
       <label htmlFor='lastName' className='relative w-full text-xs'>
-        <span className='px-1'>Last Name </span>
+        <span className='px-1 text-[#181818] font-normal'>Last Name </span>
         <Input
           className='w-full'
           type='text'
@@ -74,7 +74,7 @@ function SignUpFields() {
       </label>
 
       <label htmlFor='email' className='relative w-full text-xs'>
-        <span className='px-1'> Email </span>
+        <span className='px-1 text-[#181818] font-normal'> Email </span>
         <Input
           className=' w-full'
           type='email'
@@ -103,7 +103,7 @@ function SignUpFields() {
       </label>
 
       <label htmlFor='address' className='relative w-full text-xs'>
-        <span className='px-1'> Address </span>
+        <span className='px-1 text-[#181818] font-normal'> Address </span>
         <textarea
           id='address'
           name='address'
@@ -121,7 +121,7 @@ function SignUpFields() {
       </label>
 
       <label htmlFor='state' className='relative w-full text-xs'>
-        <span className='px-1'> State </span>
+        <span className='px-1 text-[#181818] font-normal'> State </span>
         <select
           id='state'
           name='state'
@@ -142,7 +142,7 @@ function SignUpFields() {
       </label>
 
       <label htmlFor='pinCode' className='relative w-full text-xs'>
-        <span className='px-1'>Pin Code</span>
+        <span className='px-1 text-[#181818] font-normal'>Pin Code</span>
         <Input
           className='w-full'
           type='text'
