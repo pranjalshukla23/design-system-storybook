@@ -3,8 +3,7 @@ import React from "react";
 export const Button = ({
   label = "Submit",
   color = "primary",
-  size = "sm",
-  variant = "contained",
+  size = "lg",
   icon,
   onClick,
   onMouseOver,
@@ -21,23 +20,20 @@ export const Button = ({
       onClick={onClick}
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
-      className={` text-base  font-bold rounded-lg w-64 ${
-        color === "success"
-          ? " text-white   bg-green-500"
-          : color === "secondary"
-          ? " text-white  bg-purple-400"
-          : color === "error"
-          ? " text-white   font-bold bg-red-500"
-          : color === "primary"
-          ? " text-white bg-[#1B2054]"
-          : " text-black bg-none border-2"
+      className={` text-base  font-bold rounded-lg ${
+        size === "sm" ? "w-32" : size === "md" ? "w-52" : "w-60"
       }
-
-      ${
-        variant === "text"
-          ? "border-none bg-none text-black"
-          : "border-none bg-[#1B2054] text-white"
-      }
+        ${
+          color === "success"
+            ? " text-white   bg-green-500"
+            : color === "secondary"
+            ? " text-white  bg-purple-400"
+            : color === "error"
+            ? " text-white   font-bold bg-red-500"
+            : color === "primary"
+            ? " text-white bg-[#1B2054]"
+            : " text-black bg-none border-2"
+        }
 
       `}
       style={newStyle}

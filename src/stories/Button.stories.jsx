@@ -1,5 +1,6 @@
 import { Button } from "../components/Button";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import arrowIcon from "../images/arrow.svg";
 
 //define a folder
 export default {
@@ -64,19 +65,7 @@ export default {
         type: "radio",
       },
     },
-    variant: {
-      description: "select the type of button to render in the UI",
-      options: ["text", "contained"],
-      defaultValue: "text",
-      table: {
-        type: {
-          summary: "string",
-        },
-      },
-      control: {
-        type: "radio",
-      },
-    },
+
     style: {
       description: "prop to style the button component",
       defaultValue: {},
@@ -149,7 +138,7 @@ export const button = Template.bind({});
 
 //passing arguments to template component
 button.args = {
-  icon: <HiOutlineArrowNarrowRight className='inline float-right' />,
+  icon: <img src={arrowIcon} alt='arrow' />,
 };
 
 //customize source code

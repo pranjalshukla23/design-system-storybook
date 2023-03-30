@@ -5,6 +5,7 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import { Button } from "../Button";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import arrowIcon from "../../images/arrow.svg";
 
 function LogInFields() {
   const [password, setPassword] = useState("");
@@ -13,10 +14,13 @@ function LogInFields() {
 
   return (
     <>
-      <label htmlFor='email' className='relative w-full text-xs'>
+      <label
+        htmlFor='email'
+        className='relative w-full text-xs  flex flex-col gap-1'
+      >
         <span className='px-1 text-[#181818] font-normal'>Email</span>
         <Input
-          className='peer'
+          className={"peer box-border h-10"}
           type='email'
           id='email'
           name='email'
@@ -34,17 +38,20 @@ function LogInFields() {
           }}
         />
         {email.length > 0 && email.length < 5 ? (
-          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#E46869] text-base' />
+          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-8 right-4 text-[#E46869] text-base' />
         ) : email.length <= 0 ? (
           <></>
         ) : (
-          <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-7 right-4 text-[#42C87F] text-base' />
+          <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-8 right-4 text-[#42C87F] text-base' />
         )}
       </label>
-      <label htmlFor='firstName' className='relative w-full text-xs'>
+      <label
+        htmlFor='firstName'
+        className='relative w-full text-xs  flex flex-col gap-1'
+      >
         <span className='px-1 text-[#181818] font-normal'>Password</span>
         <Input
-          className='peer'
+          className={"peer box-border h-10"}
           type={`${showPassword ? "text" : "password"}`}
           id='password'
           name='password'
@@ -55,12 +62,12 @@ function LogInFields() {
         {showPassword ? (
           <AiOutlineEye
             onClick={() => setShowPassword(false)}
-            className='absolute inset-y-8 right-4 '
+            className='absolute inset-y-8 right-4 text-base cursor-pointer'
           />
         ) : (
           <AiOutlineEyeInvisible
             onClick={() => setShowPassword(true)}
-            className='absolute inset-y-8 right-4 '
+            className='absolute inset-y-8 right-4 text-base cursor-pointer'
           />
         )}
       </label>
@@ -70,7 +77,7 @@ function LogInFields() {
         }}
         label='Login'
         variant='contained'
-        icon={<HiOutlineArrowNarrowRight />}
+        icon={<img src={arrowIcon} alt='arrow' />}
       />
     </>
   );
