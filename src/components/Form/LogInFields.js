@@ -46,7 +46,7 @@ function LogInFields() {
         )}
       </label>
       <label
-        htmlFor='firstName'
+        htmlFor='password'
         className='relative w-full text-xs  flex flex-col gap-1'
       >
         <span className='px-1 text-[#181818] font-normal'>Password</span>

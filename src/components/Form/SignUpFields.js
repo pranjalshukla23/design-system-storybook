@@ -5,6 +5,7 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import { Button } from "../Button";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import arrowIcon from "../../images/arrow.svg";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 function SignUpFields() {
   const [firstName, setFirstName] = useState("");
@@ -13,6 +14,9 @@ function SignUpFields() {
   const [pinCode, setPinCode] = useState("");
   const [state, setState] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <>
@@ -110,6 +114,69 @@ function SignUpFields() {
           <></>
         ) : (
           <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-8 right-4 text-[#42C87F] text-base' />
+        )}
+      </label>
+
+      <label
+        htmlFor='password'
+        className='relative w-full text-xs  flex flex-col gap-1'
+      >
+        <span className='px-1 text-[#181818] font-normal'> Password </span>
+        <Input
+          className={"peer box-border h-10"}
+          type={`${showPassword ? "text" : "password"}`}
+          id='password'
+          name='password'
+          placeholder=''
+          fullWidth={true}
+          value={password}
+          onChange={setPassword}
+        />
+        {showPassword ? (
+          <AiOutlineEye
+            onClick={() => setShowPassword(false)}
+            className='absolute inset-y-8 right-4 text-base cursor-pointer'
+          />
+        ) : (
+          <AiOutlineEyeInvisible
+            onClick={() => setShowPassword(true)}
+            className='absolute inset-y-8 right-4 text-base cursor-pointer'
+          />
+        )}
+      </label>
+
+      <label
+        htmlFor='cpassword'
+        className='relative w-full text-xs  flex flex-col gap-1'
+      >
+        <span className='px-1 text-[#181818] font-normal'>
+          {" "}
+          Confirm Password{" "}
+        </span>
+        <Input
+          className={"peer box-border h-10"}
+          type='password'
+          id='cpassword'
+          name='cpassword'
+          placeholder=''
+          fullWidth={true}
+          value={confirmPassword}
+          onChange={setConfirmPassword}
+          style={{
+            border:
+              confirmPassword.length > 0 && password !== confirmPassword
+                ? "3px solid rgba(222, 42, 44, 0.45)"
+                : confirmPassword.length > 0 && password === confirmPassword
+                ? "3px solid rgba(31, 166, 93, 0.45)"
+                : "",
+          }}
+        />
+        {confirmPassword.length > 0 && password !== confirmPassword ? (
+          <MdErrorOutline className='peer-focus-within:block hidden absolute inset-y-8 right-4 text-[#E46869] text-base' />
+        ) : confirmPassword.length > 0 && password === confirmPassword ? (
+          <AiOutlineCheckCircle className='peer-focus-within:block hidden absolute inset-y-8 right-4 text-[#42C87F] text-base' />
+        ) : (
+          <></>
         )}
       </label>
 
