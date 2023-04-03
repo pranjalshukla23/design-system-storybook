@@ -109,7 +109,7 @@ export default {
     },
 
     onMouseOver: {
-      description: "event to trigger on hovering over the mouse",
+      description: "event to trigger on hovering the cursor over the button",
       table: {
         type: {
           summary: "((event?: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
@@ -117,7 +117,7 @@ export default {
       },
     },
     onMouseOut: {
-      description: "event to trigger on taking the cursor out over the mouse",
+      description: "event to trigger on taking the cursor out of the button",
       table: {
         type: {
           summary: "((event?: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
