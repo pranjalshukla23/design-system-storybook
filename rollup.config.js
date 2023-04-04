@@ -23,20 +23,41 @@ export default {
   ],
   plugins: [
     postcss({
-      plugins: [],
+      config: {
+        path: "./postcss.config.js",
+      },
+      extensions: [".css"],
       minimize: true,
+      inject: {
+        insertAt: "top",
+      },
     }),
     babel({
       exclude: "node_modules/**",
       presets: ["@babel/preset-react"],
     }),
     external(),
+    resolve(),
     terser(),
     peerDepsExternal(),
-    resolve(),
     commonjs(),
-    postcss({
-      extensions: [".css"],
-    }),
   ],
+  // plugins: [
+  //   postcss({
+  //     plugins: [],
+  //     minimize: true,
+  //   }),
+  //   babel({
+  //     // exclude: "node_modules/**",
+  //     presets: ["@babel/preset-react"],
+  //   }),
+  //   external(),
+  //   terser(),
+  //   peerDepsExternal(),
+  //   resolve(),
+  //   commonjs(),
+  //   postcss({
+  //     extensions: [".css"],
+  //   }),
+  // ],
 };
