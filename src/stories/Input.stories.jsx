@@ -47,7 +47,7 @@ export default {
         },
       },
       defaultValue: "outlined",
-      options: ["standard", "outlined", "filled"],
+      options: ["standard", "filled"],
       control: {
         type: "radio",
       },

@@ -4,7 +4,7 @@ export const Input = ({
   className,
   id,
   name,
-  variant = "outlined",
+  variant = "standard",
   type = "text",
   size = "sm",
   value,
@@ -27,12 +27,10 @@ export const Input = ({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-        className={` font-normal rounded-xl outline-0 focus:border-[3px] focus:border-blue-500 focus:ring-0 focus:ring-inherit bg-white ${
+        className={` font-normal rounded-xl outline-0 focus:border-[3px] focus:border-blue-500 focus:ring-0 focus:ring-inherit ${
           variant === "standard"
-            ? "border-b-2 border-b-slate-300 "
-            : variant === "filled"
-            ? "border-b-2 border-b-gray-500 bg-blue-500"
-            : "border-1 border-bcolor"
+            ? " "
+            : "border-b-2 border-b-gray-500 bg-blue-500 placeholder:text-black"
         } ${fullWidth ? "w-full" : ""}
         
        `}

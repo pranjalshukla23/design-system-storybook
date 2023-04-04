@@ -1,3 +1,4 @@
+import React from "react";
 export const Typography = ({ children, style, variant = "default" }) => {
   console.log(variant);
   return (
